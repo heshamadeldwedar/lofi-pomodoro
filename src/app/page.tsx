@@ -1,11 +1,12 @@
 'use client';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Timer from '@/src/app/components/timer';
 import { useState } from 'react';
 
 
 export default function Home() {
 
+  const [rounds, setRound] = useState(1);
+  const [breaks, setBreak] = useState(1);
   const [running, setRunning] = useState(false);
 
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <main className="flex flex-col gap-8 items-center sm:items-start">
 
         <div>
+
+
           <button
 
             onClick={() => setRunning(!running)}
@@ -23,6 +26,7 @@ export default function Home() {
           >
             {running ? 'Stop' : 'Start'}
           </button>
+
         </div>
 
 
