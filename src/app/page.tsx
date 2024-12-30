@@ -23,7 +23,7 @@ export default function Home() {
     { type: 'work', duration: 1500, title: 'Pomodoro', index: 4 },
     { type: 'long-break', duration: 900, title: 'Long Break', index: 4 },
   ];
-  const [currentRoundIndex, setRoundIndex] = useState(0);
+  const [currentRoundIndex] = useState(0);
   const currentPeriod = pomodoroRound[currentRoundIndex];
 
   return (
@@ -62,7 +62,7 @@ export default function Home() {
               className="w-16 h-16 p-3.5 border border-inherit rounded-2xl"
               onClick={() => setRunning(!running)}
             >
-              <img src={running ? '/pause.svg' : '/start.svg'} />
+              <img src={running ? '/pause.svg' : '/start.svg'} alt={running ? 'pause': 'start'} />
             </button>
 
             {/* Goal Counter */}
