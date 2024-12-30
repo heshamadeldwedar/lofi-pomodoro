@@ -41,5 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 #firebase
-/.firebase
+.firebase
+.firebase/hosting.b3V0.cache
 
+/.vscode

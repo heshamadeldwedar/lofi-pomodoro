@@ -24,7 +24,7 @@ const Timer: React.FC<TimerProps> = ({ initialValue, onExpire, running }) => {
   }, [time, onExpire, running]);
 
   return (
-    <div className="flex justify-center align-center text-9xl" >
+    <div className="flex justify-center align-center text-8xl" >
       <p>{formatTime(time)}</p>
     </div>
   );
